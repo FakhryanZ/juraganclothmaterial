@@ -26,5 +26,11 @@
           <i class="fas fa-fw fa-table"></i>
           <span>Produk</span></a>
       </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="user.php">
+          <i class="fas fa-fw fa-table"></i>
+          <span>User</span></a>
+      </li>
     </ul>
     <!-- End of Sidebar -->

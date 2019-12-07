@@ -1,6 +1,9 @@
 <?php
     include '../config.php';
     session_start();
+    if ($_SESSION['status'] != "login") {
+        header("location:login.php");
+    }
 
     $idProduk = $_GET['idProduk'];
 
