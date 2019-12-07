@@ -16,6 +16,6 @@
         header("location: produk.php");
     }else {
         # code...
-        echo "tes".$cek;
+        header("location: login.php");
     }
 ?>
