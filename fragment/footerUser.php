@@ -1,4 +1,4 @@
-<div id="footer" class="container-fluid" style="padding-left:100px;padding-right:100px; padding-top:70px;padding-bottom:70px">
+<div id="footer" class="container-fluid" style="padding-left:10px;padding-right:10px; padding-top:70px;padding-bottom:70px">
     <div class="row">
         <div class="col-md-4 ml-5">
             <a href="#about" style="margin-right: 150px;font-size: 40px;" class="ini-berlin">

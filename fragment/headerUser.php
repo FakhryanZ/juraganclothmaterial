@@ -25,6 +25,11 @@
         background-repeat: no-repeat;
         background-size: 100% 100%;
     }
+    .imgcenter{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 </style>
 <body>
 <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
