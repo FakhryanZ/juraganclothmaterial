@@ -2,7 +2,7 @@
     include '../config.php';
 
     $username = $_POST['username'];
-    $password = md5($_POST['password']);
+    $password = ($_POST['password']);
 
     
     $login = mysqli_query($mysqli,"select * from user where username='$username' and password='$password'");

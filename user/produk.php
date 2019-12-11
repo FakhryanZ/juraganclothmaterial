@@ -29,6 +29,14 @@
             </div>
         </div>
     </div>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css" />
+
+<!-- Bootstrap CDN -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
     <div class="container bg-white mt-5" style="padding-top:0px;padding-bottom:70px">
         <div class="row">
             <?php
@@ -38,14 +46,17 @@
                             while ($itemProduk = mysqli_fetch_array($produk)) { ?>
                                     <div class="col-4 d-flex align-items-stretch mb-3">
                                         <div class="card">
-                                            <img class="card-img-top" src="../fileUpload/<?php echo $itemProduk['gambarProduk']; ?>" width="260" height="260" alt="Card image cap">
+                                            <img class="card-img-top" src="../fileUpload/<?php echo $itemProduk['gambar_produk']; ?>" width="260" height="260" alt="Card image cap">
                                             <div class="card-body d-flex justify-content-end flex-column">
-                                                <h5 class="card-title" align="left"><?php echo $itemProduk['namaProduk']; ?></h5>
-                                                <p class="card-text text-truncate" align="left"><?php echo $itemProduk['deskripsiProduk']; ?></p>
-                                                <p class="card-text" align="left">Stok : <?php echo $itemProduk['stokProduk']; ?></p>
-                                                <p class="card-text" align="left">Harga : <?php echo $itemProduk['hargaProduk']; ?></p>
+                                                <h5 class="card-title" align="left"><?php echo $itemProduk['nama_produk']; ?></h5>
+                                                <p class="card-text text-truncate" align="left"><?php echo $itemProduk['deskripsi_produk']; ?></p>
+                                                <p class="card-text" align="left">Stok : <?php echo $itemProduk['stok_produk']; ?></p>
+                                                <p class="card-text" align="left">Harga : <?php echo $itemProduk['harga_produk']; ?></p>
                                                 <div class="d-flex justify-content-between">
-                                                    <a href="detailProduk.php?id=<?php echo $itemProduk['idProduk']; ?>" class="btn btn-primary">Go Here</a>
+                                                    <a href="detailProduk.php?id=<?php echo $itemProduk['id_produk']; ?>" class="btn btn-primary">Go Here</a>
+                                                </div>
+                                                <div class="d-flex justify-content-between">
+                                                <a href="beli.php?id=<?php echo $itemProduk['id_produk']; ?>"><button type="submit" class="btn btn-warning my-3" name="add">Add to Cart <i class="fas fa-shopping-cart"></i></button></a>
                                                 </div>
                                             </div>
                                         </div>
