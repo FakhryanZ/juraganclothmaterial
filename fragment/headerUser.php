@@ -1,5 +1,8 @@
 <?php
     include '../config.php';
+    session_start();
+    @$username = $_SESSION["username"];
+    @$id_user = $_SESSION["id_user"];
 ?>
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -15,6 +18,12 @@
 <style>
     .quicksand{
         font-family: 'Quicksand', sans-serif;
+    }
+    .bglogin{
+        background-image: url("../assets/images/shutterstock_650498251.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
     }
 </style>
 <body>
@@ -52,11 +61,11 @@
                 <div class="dropdown">
                     <a href="#" class="nav-link dropdown-toggle" style="margin-right:50px;color:white" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Welcome <span><?php echo @$username ?></span> </a>
                     <div class="dropdown-menu transparana ini-quicksand">
-                        <a href="./process/userLogout.php" class="dropdown-item">Logout</a>
+                        <a href="logout.php" class="dropdown-item">Logout</a>
                     </div>
                 </div>
             <?php } else { ?>
-                <a class="nav-link" href="signin.php" style="margin-right: 100px;color: white">Sign In </a>
+                <a class="nav-link" href="login.php" style="margin-right: 100px;color: white">Log In </a>
             <?php } ?>
             </li>
         </ul>

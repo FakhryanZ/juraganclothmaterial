@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-4 ml-5">
             <a href="#about" style="margin-right: 150px;font-size: 40px;" class="ini-berlin">
-                OSem
+                Juragan Cloth
             </a>
             <br>
             <br>
@@ -27,21 +27,21 @@
         <div class="col-md-5 ini-quicksand ml-5">
             <p>Contact us</p>
             <i class="fas fa-envelope-square"></i>
-            <a href="" style="color:black;">OSem@gmail.com</a>
+            <a href="" style="color:black;">juragancloth@gmail.com</a>
             <br>
             <br>
             <i class="fab fa-instagram"></i>
-            <a href="" style="color:black;"> OSem.id</a>
+            <a href="" style="color:black;"> juragancloth.id</a>
             <br>
             <br>
             <i class="fas fa-map-signs"></i>
-            <a href="" style="color:black;"> Jl.Buyut Risah, Tegalgondo, Karangploso, Malang</a>
+            <a href="" style="color:black;"> Jl.Soekarno Hatta, Lowokwaru, Malang</a>
         </div>
     </div>
     <div class="row">
         <div class="col-md-12 text-center mt-5 ini-quicksand">
             <hr>
-            <p>Proyek@Osem.co.id</p>
+            <p>e-buisness@juragancloth.co.id</p>
         </div>
     </div>
 </div>
