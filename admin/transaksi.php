@@ -30,14 +30,14 @@ include('../fragment/headerAdmin.php');
             <div class="container-fluid">
                 <!-- Page Heading -->
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                <h1 class="h3 mb-0 text-gray-800">User</h1>
+                <h1 class="h3 mb-0 text-gray-800">Transaksi</h1>
                 
                 <!-- Tablenya bos -->
                 </div>
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                                <h6 class="m-0 font-weight-bold text-primary">Table Data User</h6>
+                                <h6 class="m-0 font-weight-bold text-primary">Table Data Transaksi</h6>
                             </div>
                         </div>
                         <div class="card-body">
@@ -45,24 +45,35 @@ include('../fragment/headerAdmin.php');
                             <table class="table table-bordered text-center" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                <th>First Name</th>
-                                <th>Last Name</th>
-                                <th>Email</th>
-                                <th>Alamat</th>
-                                <th>No Tlp</th>
+                                <th>Tanggal</th>
+                                <th>Total Harga</th>
+                                <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php
-                                $user = mysqli_query($mysqli,"select * from user");
-                                while ($itemUser = mysqli_fetch_array($user)) {
-                                    echo "<tr>";
+                                $produk = mysqli_query($mysqli,"select * from transaksi where konfirmasi = 0");
+                                while ($itemProduk = mysqli_fetch_array($produk)) {
                                     # code...
-                                    echo "<td>".$itemUser['firstName']."</td>";
-                                    echo "<td>".$itemUser['lastName']."</td>";
-                                    echo "<td>".$itemUser['email']."</td>";
-                                    echo "<td>".$itemUser['alamat']."</td>";
-                                    echo "<td>".$itemUser['noTlp']."</td>";
+                                    echo "<tr>";
+                                    $origDate = $itemProduk['tglTransaksi'];
+                                    $convertedDate = date("d-m-Y", strtotime($origDate));
+                                    echo "<td>".$convertedDate."</td>";
+                                    echo "<td>".$itemProduk['totalHarga']."</td>";
+                                    echo "<td><a href='konfirmasiTransaksi.php?idTransaksi=".$itemProduk['idTransaksi']."' role='button' class='btn btn-success btn-icon-split'>
+                                    <span class='icon text-white-50'>
+                                    <i class='fas fa-check'></i>
+                                    </span>
+                                    <span class='text'>Confirmation</span>
+                                    </a>
+                                    <span class='text'>|</span>
+                                    <a href='deleteTransaksi.php?idTransaksi=".$itemProduk['idTransaksi']."' role='button' class='btn btn-danger btn-icon-split'>
+                                        <span class='icon text-white-50'>
+                                            <i class='fas fa-trash'></i>
+                                        </span>
+                                        <span class='text'>Delete</span>
+                                    </a>
+                                    </td>";
                                     echo "</tr>";
                                 } ?>
                             </tbody>

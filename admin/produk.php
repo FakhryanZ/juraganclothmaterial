@@ -64,7 +64,7 @@ include('../fragment/headerAdmin.php');
                                 $produk = mysqli_query($mysqli,"select * from produk");
                                 while ($itemProduk = mysqli_fetch_array($produk)) {
                                     # code...
-
+                                    echo "<tr>";
                                     echo "<td>".$itemProduk['namaProduk']."</td>";
                                     echo "<td><img src='../fileUpload/".$itemProduk['gambarProduk']."' width='100'></td>";
                                     echo "<td>".$itemProduk['stokProduk']."</td>";
@@ -84,6 +84,7 @@ include('../fragment/headerAdmin.php');
                                                 <span class='text'>Delete</span>
                                             </a>
                                             </td>";
+                                    echo "</tr>";
                                 } ?>
                             </tbody>
                             </table>

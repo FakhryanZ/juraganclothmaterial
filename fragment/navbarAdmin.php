@@ -35,12 +35,11 @@
     </form>
     </div>
 </li>
-
 <!-- Nav Item - User Information -->
 <li class="nav-item dropdown no-arrow">
     <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
-    <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+    <span class="mr-2 d-none d-lg-inline text-gray-600 small" style="font-weight: bold;"><?=$_SESSION['nama_user'];?></span>
+    <img class="img-profile rounded-circle ml-2" src="https://middle.pngfans.com/20190411/q/logo-perfil-png-computer-icons-user-clipart-5b6f99c51b04e9fe.jpg">
     </a>
     <!-- Dropdown - User Information -->
     <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">

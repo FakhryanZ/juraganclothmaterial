@@ -11,7 +11,9 @@
     if ($cek > 0) {
         # code...
         session_start();
-        $_SESSION['username'] = $username;
+        $r = mysqli_fetch_assoc($login);
+        $_SESSION['idAdmin'] = $r['id'];
+        $_SESSION['nama_user'] = $r['nama'];
         $_SESSION['status'] = "login";
         header("location: produk.php");
     }else {
